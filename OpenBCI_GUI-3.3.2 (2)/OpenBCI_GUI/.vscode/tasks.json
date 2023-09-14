@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Sketch",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      // "command": "${config:processing.path}",
+      "command": "E:\\微信下载\\WeChat Files\\wxid_s80yyszi2f1312\\FileStorage\\File\\2023-08\\processing-3.5.4-windows64\\processing-3.5.4",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "args": [
+		"--force",
+		"--sketch=${workspaceRoot}",
+		"--output=${workspaceRoot}/out",
+		"--run"
+	  ],
+      "windows": {
+        "type": "process",
+        "args": [
+          "--force",
+          {
+            "value": "--sketch=${workspaceRoot}",
+            "quoting": "strong"
+          },
+          {
+            "value": "--output=${workspaceRoot}\\out",
+            "quoting": "strong"
+          },
+          "--run"
+        ]
+      }
+    }
+  ]
+}
